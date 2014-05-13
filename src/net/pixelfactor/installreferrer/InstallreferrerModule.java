@@ -16,6 +16,8 @@ import org.appcelerator.kroll.annotations.Kroll;
 import org.appcelerator.titanium.TiApplication;
 import org.appcelerator.kroll.common.Log;
 
+import com.google.ads.conversiontracking.AdWordsConversionReporter;
+
 @Kroll.module(name="Installreferrer", id="net.pixelfactor.installreferrer")
 public class InstallreferrerModule extends KrollModule
 {
@@ -50,6 +52,12 @@ public class InstallreferrerModule extends KrollModule
 		return null;
 	}
 	
+	@Kroll.method
+	public void reportWithConversionId(String conversionID, String label, String value, Boolean isRepeatable)
+	{
+		AdWordsConversionReporter.reportWithConversionId(TiApplication.getInstance(), conversionID, label, value, isRepeatable);
+	}
+		
 	// Properties
 	@Kroll.getProperty
 	public String getExampleProp()
