@@ -2,8 +2,8 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1
-apiversion: 2
+version: 2.0
+apiversion: 3
 description: Need to get the INSTALL_REFERRER from Google Play? Don't know how? This module will store the INSTALL_REFERRER when it's broadcasted, and will return it to you when you ask for it nicely.
 author: Golan Cohen, Px-Factor.net
 license: This code is in the public domain. You can copy, use, modify and distribute it anyway you want free of charge.
@@ -12,10 +12,11 @@ However:
 NO WARANTEE, UNDER ANY CASE. USE IT, ABUSE IT, BUT I'M NOT RESPONSIBLE IF YOUR PET DIES AS A RESULT OF USING THIS CODE. OR IF ANYTHING ELSE BAD HAPPENS.
 copyright: 2014, Golan Cohen
 
+architectures: armeabi-v7a x86
 
 # these should not be edited
 name: InstallReferrer
 moduleid: net.pixelfactor.installreferrer
 guid: a14f5921-7987-4eb6-ac7e-ba732c53143c
 platform: android
-minsdk: 3.1.3.GA
+minsdk: 6.0.0.GA
